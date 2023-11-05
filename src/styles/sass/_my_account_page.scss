@@ -1,0 +1,15 @@
+:where(body.logged-in.woocommerce-account.woocommerce-page) {
+    .woocommerce {
+        display: flex;
+        flex-direction: column;
+        
+        .woocommerce-MyAccount-navigation {
+            min-width: 250px;
+        }
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 16px;
+        }
+    }
+}

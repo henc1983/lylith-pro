@@ -1,0 +1,38 @@
+#company-features {
+    .feature-item {
+        &:hover {
+            .feature-image {
+                scale: 1.2;
+            }
+        }
+    }
+    
+    h3,p {
+        cursor: default;
+        width: 80%;
+    }
+    
+    .feature-image {
+        position: absolute;
+        top: 0;
+        min-height: 90px;
+        width: 80%;
+        padding-left: 30px;
+        background-color:#fbcfe8; 
+        background: linear-gradient(90deg, #fbcfe8 30%, transparent 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 15% 85%, 10% 100%, 5% 85%, 0 85%);
+        z-index: -1;
+        scale: 1;
+        transform-origin: left center;
+        transition: scale 300ms;
+        
+        svg {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            height: 1em;
+            width: 1.125em;
+            font-size: inherit;
+        }
+    }
+}

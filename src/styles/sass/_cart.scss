@@ -1,0 +1,54 @@
+:where(body.woocommerce-cart) {
+    th, td {
+        padding-block: 8px
+      }
+}
+
+.qty.text {
+    width: 8ch;
+    border-color: gray;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.shop_table_responsive.table {
+    tbody th {
+        min-width: 12ch;
+    }
+    tbody td {
+        max-width: 300px;
+        text-align: end;
+    }
+}
+
+.checkout.woocommerce-checkout .chechout-section {
+    flex-basis: 100%;
+
+    @include media-breakpoint-up(md) {
+        flex-basis: 50%;
+    }
+}
+
+.payment_box {
+    background-color: lighten(map-get($map: $theme-colors, $key: 'secondary'), 35%);
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 0; 
+        left: 5%;
+        top: -13px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;      
+        border-bottom: 15px solid lighten(map-get($map: $theme-colors, $key: 'secondary'), 35%);
+    }
+}
+
+#order_review {
+    flex-basis: 100%;
+    @include media-breakpoint-up(lg) {
+        flex-basis: 33%;
+    }
+}

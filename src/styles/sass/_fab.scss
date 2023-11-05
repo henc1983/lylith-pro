@@ -1,0 +1,27 @@
+.fab.scroll-to-top {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    bottom: -110%;
+    right: 7%;
+    transition: bottom 500ms;
+    font-size: 14px;
+    z-index: 99998;
+    
+    @include media-breakpoint-up(lg) {
+        right: 5%;
+        height: 50px;
+        width: 50px;
+    
+    }
+    
+    &.scrolled {
+        bottom: calc(5% + 60px);
+        @include media-breakpoint-up(lg) {
+            bottom: 5%;
+        }
+    }
+    svg {
+        width: 1em;
+    }
+}

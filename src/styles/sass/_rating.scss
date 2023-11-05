@@ -1,0 +1,15 @@
+.lylith-pro-rating {
+    color: map-get($map: $theme-colors, $key: "dark");
+
+    .rating-stars {
+        gap: 2px;
+        svg {
+            font-size: 12px;
+            color: darken(map-get($map: $theme-colors, $key: "neutral" ), 5%);
+
+            &.active {
+                color: map-get($map: $theme-colors, $key: "warning");
+            }
+        }
+    }
+}

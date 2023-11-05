@@ -1,0 +1,14 @@
+.social-media-icons {
+    .icon {
+        display: flex;
+        font-size: 36px;
+        color: map-get($map: $theme-colors, $key: "dark");
+
+        &.facebook {
+            color: #0767FF;
+        }
+        &.instagram {
+            color: #FE176C;
+        }
+    }
+}

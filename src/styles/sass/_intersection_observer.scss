@@ -1,0 +1,61 @@
+.intersection {
+    opacity:0;
+    
+    &.fromLeft {
+        transform: translateX(-100px);
+    }
+    &.fromBottom {
+        transform: translateY(100px);  
+    }
+    &.fromRight {
+        transform: translateX(100px);
+    }
+    &.fromTop {
+        transform: translateY(-100px);  
+    }
+    &.scaled {
+        scale: 0.75;  
+    }
+    
+    
+    &.animation-completed {
+        opacity:1;
+        transition: all;
+        transition-timing-function: ease;
+        transition-duration: .5s;
+        
+        &.midDuration {
+            transition-duration: 1s;
+        }
+        &.longDuration {
+            transition-duration: 2s;
+        }
+        &.scaled {
+            scale: 1;  
+        }
+        &.fromLeft, &.fromRight {
+            transform: translateX(0px);
+        }
+        &.fromBottom, &.fromTop {
+            transform: translateY(0px);  
+        }
+        &.staggered {
+            &.d-100 {
+                transition-delay: 100ms;
+            }
+            &.d-200 {
+                transition-delay: 200ms;
+            }
+            &.d-300 {
+                transition-delay: 300ms;
+            }
+            &.d-400 {
+                transition-delay: 400ms;
+            }
+            &.d-500 {
+                transition-delay: 500ms;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,37 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg.progress {
+        height: 60px;
+        width: 60px;
+        color: #ffffff;
+        animation: spin 1s infinite;
+    }
+
+    &.cart-backdrop {
+        span {
+            height: 100px;
+            width: 100px;
+            opacity: .25;
+            filter: blur(.5px);
+            color: white;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            outline: 10px solid white;
+
+            svg {
+                transform: translateY(-4px);
+            }
+        }
+    }
+}

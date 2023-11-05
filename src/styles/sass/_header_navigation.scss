@@ -1,0 +1,201 @@
+#lylith-pro-site-header {
+    z-index: 99998;
+
+    @include media-breakpoint-up(lg) {
+        top: var(--wp-admin--admin-bar--height, 0);
+    }
+
+    #normal-navbar {
+        background-color: lighten(map-get($theme-colors, "primary"), 4%);
+
+        .svg-site-logo {
+            transform: translateY(8px);
+            svg{
+                height: 60px;
+                width: 210px;
+            }
+        }
+    }
+    
+    .navbar-wrapper {
+        a.main-logo {
+            height: max-content;
+    
+            img {
+                height: 44px;
+            }   
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 200;
+            letter-spacing: 0.025em;
+            color: darken($light, 20%);
+            font-family: 'Inter', sans-serif;
+            
+            &:hover {
+                color: $light;
+            }
+        }
+        ul#navbar-right-section {
+            .header-product-searchbar {
+                display: none;
+
+                @include media-breakpoint-up(lg) {
+                    display: block;
+                }
+            }
+
+            .buttons {
+                &.no-bottom-navigation {
+                    display: flex;
+                }                
+                
+            }
+        }
+
+    }
+}
+a.navbar-icon-button.menu-toggle {
+    height: 44px;
+    width: 44px;
+    box-shadow: 0 0 2px 1px rgba( 255, 255, 255, .25);
+    transition: all 250ms ease;
+    margin-left: 16px;
+    padding: 10px;
+
+    &:hover, &:active, &:focus-visible {
+        color: map-get($map: $theme-colors, $key: "warning");
+        background-color: rgba( 255, 255, 255, .01);
+        box-shadow: 0 0 2px 2px rgba($color: map-get($map: $theme-colors, $key: "warning"), $alpha: .5);
+
+    }
+
+    svg {
+        font-size: 18px;
+        width: 1em;
+        height: 1em;    
+    }
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+
+a.navbar-icon-button, a.navbar-bg-icon-button {
+    &:not(.menu-toggle) {
+        display: block;
+    }
+    
+    position: relative;
+    width: max-content;
+    padding: 6px;
+    
+    &:hover {
+        svg {
+            transform: scale(1.15);
+        }
+    }
+    
+    svg {
+        transition: transform 250ms;
+        transform: scale(1);
+        font-size: 20px;
+        width: 1em;
+        height: 1em;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 22px;
+        }
+    }
+
+    .badge {
+        position: absolute;
+        top: -4px;
+        right: -6px;
+        border-radius: 20px;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 18px;
+        height: 18px;
+        padding: 0 4px;
+        box-shadow: 0 0 3px 1px rgba( 0, 0, 0, .35);
+        
+        &.myaccount {
+            min-width: 8px;
+            height: 8px;
+            top: 4px;
+            right: 4px;
+
+            &.logged-in {
+                background-color: #2dd4bf;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 20px;
+            height: 20px;
+            font-size: 12px;
+        }
+    }
+
+}
+
+a.navbar-bg-icon-button {
+    font-size: 12px;
+    text-decoration: none;
+    color: $light;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    box-shadow: $shadowButton;
+    transition: filter 200ms;
+    filter: brightness(100%);
+    
+    &:hover {
+        filter: brightness(90%);
+        svg {
+            transform: none;
+        }
+    }
+    
+    svg {
+        transform: none;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed;
+    }
+}
+
+#scrolled-navbar {
+    position: fixed;
+    transition: transform 300ms;
+    z-index: 99998;
+    transform: translateY(0);
+    top: var(--wp-admin--admin-bar--height, 0);
+    
+    
+    &.scrolled {
+        transform: translateY(0);
+        
+        @include media-breakpoint-up(lg) {
+            top: var(--wp-admin--admin-bar--height, 0);
+        }
+    }
+    
+    @include media-breakpoint-up(lg) {
+        transform: translateY(-151%);
+    }
+}

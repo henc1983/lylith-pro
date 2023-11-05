@@ -11,26 +11,27 @@
 
 defined('ABSPATH') or die('Hey! Are You human?!');
 
+get_header(); ?>
 
-get_header();
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-if(have_posts()) {
-    while ( have_posts() ) {
+        <?php
+            if(have_posts()) :
+                while ( have_posts() ) :
+                    the_post();
 
-    the_post();
+                    get_template_part( 'templates/content', 'page' );
+                endwhile;
+                    
+            else :
+                get_template_part( 'templates/content', 'none' );
+            endif;
+        ?>
 
-    }
+    </main>
+</div>
 
-    the_content();
-
-}
-else {
-
-    /**
-     * Here comes the content-none
-     */
-    
-}
-
+<?php
 get_footer();
 

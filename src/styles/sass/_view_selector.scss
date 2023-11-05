@@ -1,0 +1,35 @@
+label.view-select-button {
+    input[type=radio] { 
+        width: 0;
+        height: 0;
+    }
+    
+    span.img {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 200ms, color 200ms;
+        background-color: map-get($map: $theme-colors, $key: 'slate-100');
+        
+        &:hover {
+            background-color: darken(map-get($map: $theme-colors, $key: 'slate-100'), 5%);
+        }
+    }
+    
+    input[type=radio]:checked + span.img {
+        outline: 2px solid map-get($map: $theme-colors, $key: 'sky');
+    }
+
+    input[type=radio] + svg {
+        cursor: pointer;
+    }
+    
+    svg {
+        font-size: 16px;
+        width: 1em;
+        height: 1em;
+    }
+}

@@ -1,0 +1,47 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.product-process-spin {
+    position: absolute;
+    border-radius: 4px;
+    inset: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    z-index: 1;
+    color: rgba($color: #fff, $alpha: .6);
+    font-size: 24px;
+
+    .process-checked {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 10px solid rgba($color: #fff, $alpha: .6);
+        font-weight: 900;
+
+        &.error {
+            color: #dc2626;
+            border: 10px solid rgba($color: #dc2626, $alpha: .6);
+        }
+    }
+
+    svg {
+        height: 60px;
+        width: 60px;
+        animation: spin 1s infinite;
+    }
+}

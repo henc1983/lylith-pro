@@ -1,0 +1,115 @@
+
+$shadowButton :  2px 2px 6px rgba(0, 0, 0, 0.35);
+$shadowShop :  0 0 8px rgba(0, 0, 0, 0.05);
+$shadowShopLg :  0 0 16px rgba(0, 0, 0, 0.05);
+
+html,body {
+    font-family: Muli, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+svg {
+    height: 1em;
+    width: 1em;
+    path {
+        fill: currentColor;
+    }
+}
+
+ul {
+    padding-left: 0!important;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 992px,
+  xl: 1248px,
+  xxl: 1368px
+);
+
+$primary : #1e293b;
+$secondary : #db2777;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    #fbbf24,
+  "danger":     $danger,
+  "light":      #f5f5f5,
+  "dark":       #334155,
+  "neutral":    #e5e5e5,
+  "sky":        #0284c7,
+  "slate-100":  #f1f5f9,
+);
+
+$enable-gradients: false;
+$enable-shadows: false;
+$enable-important-utilities: false;
+$font-family-sans-serif: 'Muli', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+$h7-font-size:                $font-size-base * 0.825;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: '12px',
+);
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * .75,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 2,
+  8: $spacer * 2.5,
+  9: $spacer * 3,
+  10: $spacer * 5,
+);
+
+$accordion-button-color:                  #ffffff;
+$accordion-button-bg:                     $primary;
+$accordion-button-active-bg:              $primary;
+$accordion-button-active-color:           #ffffff;
+
+
+.shadow-box {
+  box-shadow: $shadowShop;
+}
+
+.shadow-box-lg {
+box-shadow: $shadowShopLg;
+}
+
+.shadow-button {
+box-shadow: $shadowButton;
+}
+
+.w-max {
+width: max-content;
+}

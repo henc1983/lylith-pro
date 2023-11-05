@@ -1,0 +1,54 @@
+form[role="search"]:not(footer .column form) {
+    .searchbar {
+        pointer-events: none;
+        svg {
+            font-size: 14px;
+            width: 1em;
+        }
+    
+    }
+
+    input[type="search"] {
+        padding-block: 10px;
+        padding-left: 32px;
+        outline-width: 2px;
+        outline-style: solid;
+        outline-color: rgba(255,255,255,0.1);
+        font-size: 14px;
+        background-color: rgba(255,255,255,0.1);
+        transition: all 300ms ease;
+        border-radius: 4px;
+        
+        &::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        &:focus-visible {
+            outline-color: rgba(219, 41, 121, 0.8);
+        }
+        
+        &:hover:not(:focus-visible) {
+            background-color: rgba(255 ,255 ,255 ,0.2);
+            outline-color: rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+#normal-navbar .normal-navbar input[type="search"] {
+    outline: none;
+    background-color: rgba($color: white, $alpha: .8);
+    border-bottom: 2px solid $secondary;
+    
+    &::placeholder {
+        color: map-get($map: $theme-colors, $key: "dark");
+    }
+    
+    &:focus-visible {
+        background-color: rgba($color: white, $alpha: .6);
+        outline: none;
+    }
+    
+    &:hover:not(:focus-visible) {
+        background-color: rgba($color: white, $alpha: .7);
+    }
+}

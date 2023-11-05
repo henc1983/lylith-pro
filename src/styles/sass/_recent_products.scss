@@ -1,0 +1,8 @@
+#recently-viewed-products {
+
+    .recent-products.products li{
+        @include media-breakpoint-up(md) {
+            max-width: 280px;
+        }
+    }
+}
